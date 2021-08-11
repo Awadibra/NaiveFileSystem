@@ -31,7 +31,7 @@ below).
 ● pwd: print working directory path.  
  
 ● cd: Change the current directory.  
-Syntax: cd <path> - Change current directory to be <path>  
+Syntax: cd "path" - Change current directory to be "path"  
 If <path> doesn’t exist print out “The system cannot find the path specified”  
 Example: cd .. - Change to the parent directory  
  
@@ -42,15 +42,15 @@ alphabetically by default. For each file/directory print out in a new line its t
 For example:  
 DIR dir1 750  
 FILE file1 1000  
-Syntax: ls [-s] <path> - Display the list of files and subdirectories in <path>
+Syntax: ls [-s] "path" - Display the list of files and subdirectories in <path>
  ls [-s] - Display the list of files and subdirectories in the working directory
 –s – Sort by size, from smaller to larger. If two or more files have the same size, sort them
 alphabetically.  
 If <path> doesn’t exist print out “The system cannot find the path specified”  
  
 ● mkdir – Create a new directory. If needed, create intermediate directories in the path.  
-Syntax: mkdir <path>  
-If <path> exists print out “The directory already exists”  
+Syntax: mkdir "path"  
+If "path" exists print out “The directory already exists”  
 Examples:  
 “mkdir /newDir” - If newDir doesn’t exist in the root directory, creates it in the root
 directory.  
@@ -65,21 +65,21 @@ mkdir d3
 cd /  
  
 ● mkfile – Create a new file. The path of the file must exist.  
-Syntax: mkfile <path/filename> <size>  
-If <path> doesn’t exist print out “The system cannot find the path specified”  
-If <path/filename> exists print out “File already exists”  
+Syntax: mkfile "path/filename" "size"  
+If "path" doesn’t exist print out “The system cannot find the path specified”  
+If "path/filename" exists print out “File already exists”  
 Example: “mkfile /dir1/dir2/mynewfile 1000” will create mynewfile in /dir1/dir2, the size of
 the file will be 1000.  
  
 ● cp – Copy a file or directory to a destination.  
-Syntax: cp <source-path> <destination-path>  
+Syntax: cp "source-path" "destination-path"  
 source-path may be either a file or a directory, destination-path is a directory.  
 If either file/directory/destination doesn’t exist print out “No such file or directory”  
 Example: “cp dir1/dir2/dir3/file1 dir4/dir5” will copy file1 to dir4/dir5  
 Example: “cp dir4 dir6” will copy dir4 (recursively) under dir6.
  
 ● mv - Move a file or directory to a new destination.  
-Syntax: mv <source-path/file-name> <destination-path>  
+Syntax: mv "source-path/file-name" "destination-path"  
 source-path may be either a file or a directory, destination-path is a directory.  
 If either source-path/file-name/destination-path doesn’t exist print out “No such file or
 directory”.  
@@ -89,7 +89,7 @@ Example: “mv dir1/dir2/dir3/file1 dir4/dir5” will move file1 to dir4/dir5
 Example: “mv dir4 dir6” will move dir4 to be under dir6.  
  
 ● rename – Rename a file or a directory.  
-Syntax: rename <path/old-name> <new-name>  
+Syntax: rename "path/old-name" "new-name"  
 If either path/old-name doesn’t exist print out “No such file or directory”.  
 If old-name is the working-directory print out “Can’t rename the working directory” and do
 not rename.  
@@ -97,8 +97,8 @@ Example: “rename dir1/dir2/file1 file2” will result in “dir1/dir2/file2”
  
 ● rm – Remove (delete) a file or a directory. If the argument is a directory remove it
 recursively.  
-Syntax: rm <path>  
-If <path> doesn’t exist print out “No such file or directory”.  
+Syntax: rm "path"  
+If "path" doesn’t exist print out “No such file or directory”.  
 Working-directory nor the root-directory can’t be removed. In such a case print out “Can’t
 remove directory”.  
  
