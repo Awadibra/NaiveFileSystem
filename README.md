@@ -126,6 +126,6 @@ Syntax: verbose <0|1|2|3>
 If the argument is different from either 0, 1, 2 or 3, print out: “Wrong verbose input”. 
  
 ● exec – Executes a command from history.  
-Syntax: exec <command-number>  
+Syntax: exec "<command-number>"
 If <command-number> doesn’t exist print out “Command not found”.  
 Example: “exec 24” will execute command number 24 as numbered in the history command
